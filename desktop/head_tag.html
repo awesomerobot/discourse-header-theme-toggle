@@ -38,8 +38,10 @@
           if (themes && themes.length > 1) {
               return themes.map(theme => {
                   let name = [theme.name];
-                  if (theme.id === settings.left_theme || settings.right_theme) {
-                      return h('li', h('a', {attributes: {"data-id": theme.id}}, name));
+                  if (theme.id === settings.left_theme) {
+                    return h('li', h('a', {attributes: {"data-id": theme.id}}, name));
+                  } else if ( theme.id === settings.right_theme) {
+                    return h('li', h('a', {attributes: {"data-id": theme.id}}, name));
                   }
               });
           }
