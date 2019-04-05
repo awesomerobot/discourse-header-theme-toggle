@@ -1,0 +1,8 @@
+left_theme:
+  default: 1
+  description: "Enter a Theme id here. To find the Theme ID, click your theme name in admin > customize > themes. The ID is the last number in the URL."
+right_theme:
+  default: 2
+immediate_reload:
+  default: false
+  description: "Reload the page immediately upon changing themes (required for themes with custom JS). If unchecked, a reload will occur on the next page navigation."

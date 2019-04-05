@@ -1,0 +1,43 @@
+.theme-selector {
+  display: flex;
+  align-items: center;
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    border: 1px solid $header_primary-medium;
+    transition: all 0.25s;
+    margin: 0 1em 0 0;
+    font-size: $font-down-1;
+
+    li {
+      padding: 0.15em 0.5em;
+      &:hover {
+        background: $quaternary-low;
+        a {
+          color: $quaternary;
+        }
+      }
+    }
+    a,
+    a:visited {
+      color: $primary-medium;
+    }
+    &.left {
+      li:first-of-type {
+        background: $quaternary;
+        a {
+          color: $header_background;
+        }
+      }
+    }
+    &.right {
+      li:last-of-type {
+        background: $quaternary;
+        a {
+          color: $header_background;
+        }
+      }
+    }
+  }
+}
