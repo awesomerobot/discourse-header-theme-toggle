@@ -3,9 +3,9 @@
   var ajax = require('discourse/lib/ajax').ajax;
   var themeSelector = require('discourse/lib/theme-selector');
 
-  api.createWidget("theme-selector", {
-      tagName: "span.theme-selector",
-      buildKey: attrs => `theme-selector`,
+  api.createWidget("header-theme-selector", {
+      tagName: "span.header-theme-selector",
+      buildKey: attrs => `header-theme-selector`,
       defaultState() {
           return { currentThemeId:  themeSelector.currentThemeId() };
       },
@@ -46,7 +46,7 @@
       },
       html(attrs, state){
           let themeHtml = this.themeHtml(state.currentThemeId);
-          themeName = "left"
+          let themeName;
           if (state.currentThemeId === settings.right_theme) {
             themeName = "right"
           } else if (state.currentThemeId === settings.left_theme) {
@@ -62,7 +62,7 @@
   api.decorateWidget('header-buttons:before', (helper)=>{
     const showExtraInfo = helper.attrs.topic;
     if(!showExtraInfo) {
-        return [helper.widget.attach('theme-selector')];
+        return [helper.widget.attach('header-theme-selector')];
       }
   });
 </script>
