@@ -38,22 +38,22 @@
           if (themes && themes.length > 1) {
               return themes.map(theme => {
                   let name = [theme.name];
-                  if (theme.id === settings.left_theme) {
-                    return h('li', h('a', {attributes: {"data-id": theme.id}}, name));
-                  } else if ( theme.id === settings.right_theme) {
-                    return h('li', h('a', {attributes: {"data-id": theme.id}}, name));
+                  if ((theme.id === settings.left_theme) || ( theme.id === settings.right_theme)) {
+                    return h('span', {attributes: {"data-id": theme.id}}, name);
                   }
               });
           }
       },
       html(attrs, state){
           let themeHtml = this.themeHtml(state.currentThemeId);
-            themeName = "left"
-          if (state.currentThemeId != settings.left_theme) {
+          themeName = "left"
+          if (state.currentThemeId === settings.right_theme) {
             themeName = "right"
+          } else if (state.currentThemeId === settings.left_theme) {
+            themeName = "left"
           }
           if (themeHtml) {
-            return [h('ul' + " ." + themeName, themeHtml)];
+            return [h('div' + " ." + themeName, themeHtml)];
           }
 
       }
