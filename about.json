@@ -1,7 +1,8 @@
 {
   "name": "header-theme-toggle",
-  "about_url": null,
-  "license_url": null,
+  "about_url": "https://meta.discourse.org/t/header-theme-toggle/113496",
+  "license_url": "https://github.com/awesomerobot/discourse-header-theme-togle/blob/master/LICENSE",
   "assets": {},
-  "color_schemes": {}
+  "color_schemes": {},
+  "component": true
 }
