@@ -28,12 +28,14 @@
       span[data-id="#{$left-theme}"] {
         color: $header_background;
         background: $quaternary;
+        cursor: default;
       }
     }
     &.right {
       span[data-id="#{$right-theme}"] {
         background: $quaternary;
         color: $header_background;
+        cursor: default;
       }
     }
   }

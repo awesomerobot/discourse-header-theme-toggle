@@ -14,10 +14,12 @@
           let id = $target.data('id');
           let user = api.getCurrentUser();
           if(user){
+            if (this.state.currentThemeId != id) {
               user.findDetails().then(user => {
                   seq = user.get("user_option.theme_key_seq");
                   this.setTheme(id, seq);
               });
+            }
           }else{
               this.setTheme(id);
           };
