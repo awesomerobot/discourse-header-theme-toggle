@@ -28,11 +28,7 @@
       setTheme(themeId, seq = 0){
           themeSelector.setLocalTheme([themeId], seq);
           this.state.currentThemeId = themeId;
-          if(settings.immediate_reload){
-            window.location.reload();
-        }else{
-            themeSelector.previewTheme([themeId]);
-        }
+          window.location.reload();
           this.scheduleRerender();
       },
       themeHtml(currentThemeId){
