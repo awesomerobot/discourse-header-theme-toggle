@@ -5,7 +5,7 @@
     display: flex;
     box-sizing: border-box;
     list-style-type: none;
-    border: 1px solid $header_primary-medium;
+    border: 1px solid var(--header_primary-medium);
     transition: all 0.25s;
     margin: 0 1em 0 0;
     font-size: $font-down-1;
@@ -14,8 +14,8 @@
       padding: 0.15em 0.5em;
       cursor: pointer;
       &:hover {
-        color: $quaternary;
-        background: $quaternary-low;
+        color: var(--quaternary);
+        background: var(--quaternary-low);
       }
       &[data-id="#{$left-theme}"] {
         order: 1;
@@ -26,15 +26,15 @@
     }
     &.left {
       span[data-id="#{$left-theme}"] {
-        color: $header_background;
-        background: $quaternary;
+        color: var(--header_background);
+        background: var(--quaternary);
         cursor: default;
       }
     }
     &.right {
       span[data-id="#{$right-theme}"] {
-        background: $quaternary;
-        color: $header_background;
+        background: var(--quaternary);
+        color: var(--header_background);
         cursor: default;
       }
     }
