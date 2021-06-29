@@ -16,7 +16,7 @@
           if(user){
             if (this.state.currentThemeId != id) {
               user.findDetails().then(user => {
-                  seq = user.get("user_option.theme_key_seq");
+                  let seq = user.get("user_option.theme_key_seq");
                   this.setTheme(id, seq);
               });
             }
